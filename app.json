@@ -2,6 +2,7 @@
   "name": "RNEASUpdate",
   "displayName": "RNEASUpdate",
   "expo": {
+    "jsEngine": "hermes",
     "extra": {
       "eas": {
         "projectId": "0eaf1315-cf5b-4827-8a7e-142d072f3d89"
@@ -13,7 +14,11 @@
     "updates": {
       "url": "https://u.expo.dev/0eaf1315-cf5b-4827-8a7e-142d072f3d89"
     },
-    "android": {},
-    "ios": {}
+    "android": {
+      "jsEngine": "jsc"
+    },
+    "ios": {
+      "jsEngine": "jsc"
+    }
   }
 }
