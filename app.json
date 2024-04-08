@@ -8,6 +8,12 @@
       }
     },
     "owner": "irfansikumbang",
-    "slug": "bitrise-update"
+    "slug": "bitrise-update",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/0eaf1315-cf5b-4827-8a7e-142d072f3d89"
+    },
+    "android": {},
+    "ios": {}
   }
 }
