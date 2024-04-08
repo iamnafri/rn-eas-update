@@ -1,4 +1,13 @@
 {
   "name": "RNEASUpdate",
-  "displayName": "RNEASUpdate"
+  "displayName": "RNEASUpdate",
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "0eaf1315-cf5b-4827-8a7e-142d072f3d89"
+      }
+    },
+    "owner": "irfansikumbang",
+    "slug": "bitrise-update"
+  }
 }
