@@ -8,13 +8,14 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "android-apk": "cd android && ./gradlew assembleRelease"  
+    "android-apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "expo": "^48.0.0",
     "expo-updates": "~0.16.4",
     "react": "18.2.0",
-    "react-native": "0.71.16"
+    "react-native": "0.71.16",
+    "react-native-webview": "11.26.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
