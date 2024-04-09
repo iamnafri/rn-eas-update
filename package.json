@@ -11,6 +11,7 @@
     "android-apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "9.3.7",
     "expo": "^48.0.0",
     "expo-updates": "~0.16.4",
     "react": "18.2.0",

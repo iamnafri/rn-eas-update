@@ -361,6 +361,8 @@ PODS:
   - React-jsinspector (0.71.16)
   - React-logger (0.71.16):
     - glog
+  - react-native-netinfo (9.3.7):
+    - React-Core
   - react-native-webview (11.26.0):
     - React-Core
   - React-perflogger (0.71.16)
@@ -511,6 +513,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -613,6 +616,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-perflogger:
@@ -692,6 +697,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 9b2a87f674f30da4706af52520e4860974cec149
   React-jsinspector: b3b341764ccda14f3659c00a9bc5b098b334db2b
   React-logger: dc96fadd2f7f6bc38efc3cfb5fef876d4e6290a2
+  react-native-netinfo: 2517ad504b3d303e90d7a431b0fcaef76d207983
   react-native-webview: 994b9f8fbb504d6314dc40d83f94f27c6831b3bf
   React-perflogger: c944b06edad34f5ecded0f29a6e66290a005d365
   React-RCTActionSheet: fa467f37777dacba2c72da4be7ae065da4482d7d
