@@ -21,23 +21,23 @@ jobs:
             !android/**
 
       - name: 🏗 Setup Node
-        if: steps.changed-files.outputs.only_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: yarn
 
       - name: 🏗 Setup EAS
-        if: steps.changed-files.outputs.only_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         uses: expo/expo-github-action@v8
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        if: steps.changed-files.outputs.only_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: yarn install
 
       - name: 🚀 Create update
-        if: steps.changed-files.outputs.only_changed == 'true'
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: eas update --auto --non-interactive
