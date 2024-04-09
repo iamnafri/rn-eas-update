@@ -21,7 +21,7 @@ import {
   Colors,
   DebugInstructions,
   // Header,
-  LearnMoreLinks,
+  // LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
@@ -89,7 +89,7 @@ function App(): JSX.Element {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
+          {/* <LearnMoreLinks /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
