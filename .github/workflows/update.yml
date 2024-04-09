@@ -1,43 +1,33 @@
-name: production
+name: update
 on:
   push:
     branches:
       - production
+    paths:
+      - 'src/**'
+      - '!android/**'
+      - '!ios/**'
 jobs:
   update:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v3
 
-      - name: Get changed files
-        id: changed-files-specific
-        uses: tj-actions/changed-files@v44
-        with:
-          files: |
-            src/**
-            !ios/**
-            !android/**
-
       - name: 🏗 Setup Node
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: yarn
 
       - name: 🏗 Setup EAS
-        if: steps.changed-files.outputs.any_changed == 'true'
         uses: expo/expo-github-action@v8
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: yarn install
 
       - name: 🚀 Create update
-        if: steps.changed-files.outputs.any_changed == 'true'
         run: eas update --auto --non-interactive
