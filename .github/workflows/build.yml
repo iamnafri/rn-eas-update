@@ -1,0 +1,19 @@
+name: build
+on:
+  push:
+    branches:
+      - production
+    paths:
+      - 'android/**'
+      - 'ios/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v3
+
+      - name: 🚀 Build app
+        run: |
+          echo Starting Bitrise build
+          curl https://app.bitrise.io/app/53682931-acc3-40f8-97a1-6bd313237d91/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"J51DzL73OjBKgiwPqyn7ow"},"build_params":{"branch":"production","workflow_id":"deploy"},"triggered_by":"Github Actions via build.yml"
